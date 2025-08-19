@@ -30,6 +30,12 @@ bld/
 *.sln
 *.vcxproj.user
 
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.bmp
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

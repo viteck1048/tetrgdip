@@ -6,7 +6,7 @@
 #define MAX_LOADSTRING 100
 #pragma warning(disable : 4996)
 
-#define ___liracalc
+//#define ___liracalc
 
 // Global Variables:
 HINSTANCE hInst;							// current instance
