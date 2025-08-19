@@ -11,7 +11,6 @@
 - Операційна система Windows
 - Microsoft Visual C++ Build Tools або Visual Studio Build Tools
 - Windows SDK
-- .NET Framework 4.0 або вище
 
 ## Збірка проекту
 
@@ -100,7 +99,6 @@ Programming coursework - a falling blocks game. Implemented in C++ using WinAPI 
 - Windows OS
 - Microsoft Visual C++ Build Tools or Visual Studio Build Tools
 - Windows SDK
-- .NET Framework 4.0 or higher
 
 ## Building the Project
 
