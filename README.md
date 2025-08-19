@@ -15,31 +15,33 @@
 
 ## Збірка проекту
 
-1. Клонуйте репозиторій:
-   ```
+1. **Клонуйте репозиторій**:
+   ```bash
    git clone https://github.com/viteck1048/tetrgdip.git
    cd tetrgdip
    ```
-2. Встановіть необхідні інструменти:
+
+2. **Встановіть необхідні інструменти**:
    - Microsoft Visual C++ Build Tools
    - Windows 7.1 SDK
 
-3. Використовуйте надані скрипти для збірки:
+3. **Використовуйте надані скрипти для збірки**:
    - `trans.bat` - компіляція вихідного коду
    - `link.bat` - лінковка об'єктних файлів
    - `run.bat` - запуск зібраного додатку
 
 ## Керування
 
-- ← → - переміщення фігури вліво/вправо
-- ↑ - обертання фігури
-- ↓ - прискорити падіння
-- Пробіл - негайно опустити фігуру
-- P - пауза
-- H - змінити шрифт (циклічно перемикає між доступними моноширинними шрифтами)
-- Ctrl+↑ - збільшити масштаб шрифту
-- Ctrl+↓ - зменшити масштаб шрифту
-- Esc - вихід з гри
+| Клавіша | Дія |
+|---------|-----|
+| ← → | Переміщення фігури вліво/вправо |
+| ↑ | Обертання фігури |
+| ↓ | Прискорити падіння |
+| P | Пауза |
+| H | Змінити шрифт |
+| Ctrl+↑ | Збільшити масштаб шрифту |
+| Ctrl+↓ | Зменшити масштаб шрифту |
+| Esc | Вихід з гри |
 
 > **Примітка:** Гра повністю сумісна з Wine (Linux) - скомпільований .exe файл чудово працює під керуванням Wine без додаткових налаштувань.
 
@@ -54,24 +56,23 @@
    - Натисніть `F6` або `Plugins` -> `NppExec` -> `Execute...`
    - Вставте наступний скрипт та збережіть його (кнопка `Save...`):
    ```
-  NPP_CONSOLE -	//unicod
-NPP_SAVE
-NPP_CONSOLE +
-cmd.exe /c "SET FILE_NAME="$(FILE_NAME)" && SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&trans.bat"
-NPP_CONSOLE -
-if "$(EXITCODE)" == "0"
-    NPP_CONSOLE +
-    cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&link.bat"
-    NPP_CONSOLE -
-endif
-if "$(EXITCODE)" == "0"
-//  NPP_CONSOLE +
-    cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY)&& SET FILE_N=$(NAME_PART)&&run.bat"
-    NPP_CONSOLE -
-endif
-if "$(EXITCODE)" == "0"
-NPP_CONSOLE 0
-endif
+	NPP_SAVE
+	NPP_CONSOLE +
+	cmd.exe /c "SET FILE_NAME="$(FILE_NAME)" && SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&trans.bat"
+	NPP_CONSOLE -
+	if "$(EXITCODE)" == "0"
+		NPP_CONSOLE +
+		cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&link.bat"
+		NPP_CONSOLE -
+	endif
+	if "$(EXITCODE)" == "0"
+	//  NPP_CONSOLE +
+		cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY)&& SET FILE_N=$(NAME_PART)&&run.bat"
+		NPP_CONSOLE -
+	endif
+	if "$(EXITCODE)" == "0"
+	NPP_CONSOLE 0
+	endif
 
    ```
 
@@ -103,31 +104,34 @@ Programming coursework - a falling blocks game. Implemented in C++ using WinAPI 
 
 ## Building the Project
 
-1. Clone the repository:
-   ```
+1. **Clone the repository**:
+   ```bash
    git clone https://github.com/viteck1048/tetrgdip.git
    cd tetrgdip
    ```
-2. Install required tools:
+
+2. **Install required tools**:
    - Microsoft Visual C++ Build Tools
    - Windows 7.1 SDK
 
-3. Use the provided build scripts:
+3. **Use the provided build scripts**:
    - `trans.bat` - compile source code
    - `link.bat` - link object files
    - `run.bat` - run the application
 
 ## Controls
 
-- ← → - Move piece left/right
-- ↑ - Rotate piece
-- ↓ - Soft drop (faster fall)
-- Space - Hard drop (instant drop)
-- P - Pause game
-- H - Change font (cycles through available monospace fonts)
-- Ctrl+↑ - Increase font scale
-- Ctrl+↓ - Decrease font scale
-- Esc - Exit game
+| Key | Action |
+|-----|--------|
+| ← → | Move piece left/right |
+| ↑ | Rotate piece |
+| ↓ | Soft drop (faster fall) |
+| Space | Hard drop (instant drop) |
+| P | Pause game |
+| H | Change font |
+| Ctrl+↑ | Increase font scale |
+| Ctrl+↓ | Decrease font scale |
+| Esc | Exit game |
 
 > **Note:** The game is fully compatible with Wine (Linux) - the compiled .exe works perfectly under Wine without additional configuration.
 
@@ -142,25 +146,23 @@ Programming coursework - a falling blocks game. Implemented in C++ using WinAPI 
    - Press `F6` or go to `Plugins` -> `NppExec` -> `Execute...`
    - Paste the following script and save it (click `Save...`):
    ```
- NPP_CONSOLE -	//unicod
-NPP_SAVE
-NPP_CONSOLE +
-cmd.exe /c "SET FILE_NAME="$(FILE_NAME)" && SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&trans.bat"
-NPP_CONSOLE -
-if "$(EXITCODE)" == "0"
-    NPP_CONSOLE +
-    cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&link.bat"
-    NPP_CONSOLE -
-endif
-if "$(EXITCODE)" == "0"
-//  NPP_CONSOLE +
-    cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY)&& SET FILE_N=$(NAME_PART)&&run.bat"
-    NPP_CONSOLE -
-endif
-if "$(EXITCODE)" == "0"
-NPP_CONSOLE 0
-endif
-
+ 	NPP_SAVE
+	NPP_CONSOLE +
+	cmd.exe /c "SET FILE_NAME="$(FILE_NAME)" && SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&trans.bat"
+	NPP_CONSOLE -
+	if "$(EXITCODE)" == "0"
+		NPP_CONSOLE +
+		cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY) && SET FILE_N=$(NAME_PART)&&link.bat"
+		NPP_CONSOLE -
+	endif
+	if "$(EXITCODE)" == "0"
+	//  NPP_CONSOLE +
+		cmd.exe /c "SET FILE_D=$(CURRENT_DIRECTORY)&& SET FILE_N=$(NAME_PART)&&run.bat"
+		NPP_CONSOLE -
+	endif
+	if "$(EXITCODE)" == "0"
+	NPP_CONSOLE 0
+	endif
    ```
 
 3. For convenience, create a hotkey (e.g., `F9`):
@@ -174,33 +176,55 @@ endif
 
 [Viktor Diachenko](https://github.com/viteck1048)
 
-За основа взел собствен проект «тетрис на ардуино» https://www.tinkercad.com/things/51vP7AlGOg3-tetris и последваща доработка за конзола windows. Модульт “tetr.h” приема команди за подготвене на масиви, избиране на тип на игра, установка на сложността (функции setup_X()), управление по време на игра (променлива scan вьв loop(typ_gry, scan)).
-scan == 1, 2, 3, 4 или 0.
-1 – 4 сьответства на натиснати копчета UP, LEFT, DOWN, RIGHT,
-0 – движение надолу по сработване на таймер IDT_TIMER1 или IDT_TIMER3.
-IDT_TIMER1 = 1сек сьс бавно намаление по гиперболическа крива (намаляне на IDT_TIMER1 управлява от IDT_TIMER2, коят се увеличава линейно)
-IDT_TIMER3 сьс тайминг ‘0’ задейства след натискане на DOWN,  вдигна флаг fl_s и работи до !prov_krok() – невозможност за продолжение на движение надолу. Флаг fl_s блокира вьвеждане от клавиатура. Идея сьс исползване на таймер сьстои в желание да пропускам чрез WinProc случайни натискания на клавиатура по време на бьрз ход надолу, а не натрупване на сьобщения, по сьща логика работи таймер IDT_TIMER4 (задейства по време на изтриване на заполнени линии и цяло поле в края на игра (функция shmarkli()))
-Взаимодействие между фигура и кошон разщитва спомощта на 2 служебни масиви mas_rab[V_LIN + 3][H_LIN + 3] и fig_tek[4][4] и координати на фигура {y,x} (‘+3’ за недопускане на излизане извьн масива при наложении mas_rab + fig_tek и детектиране на препятствие). функция prnt_podg() заполнява масив mas_pr[V_LIN][H_LIN].
-Функция kubik() получава размери на базов блок. Макроси ‘int X/Y(float)’ позволяват да представя плот за рисуване като координатно поле X * Y вне зависимост от размера на прозорец.
-Функция рисува кош, десни титри, базов блок(kb1, kb2, kb3) сьс габарити X(1)хY(1). Вьв вложени цикли матрица премества по игрово поле и ако ‘mas_pr[j][i] != 0’ рисува базов блок сьс сьответветния цвят. По сьщ начин рисува следваща фигура (fig_next[4][4]). В меню за избора на тип на игра (etap == 0) вместо mas_pr исползва статичен mas_preview.
-Накрая в зависимост от etap и pause вьрху игрово поле рисува кнопки("Normal Game", "Adventure", "LEVEL" ’↑’ ‘↓’) или сьобщения(“PAUSE”, “READY”).
-Функция GetEncoderClsid() и блок ‘if(save)’ функции DRAW_TEST__() сохраняват скриншот на отрисован вьв DRAW_TEST() кадр (картинки в тази документ направила сама игра.)(WM_KEYUP-> VK_SNAPSHOT->{save = 1;updateWindow();})
-Функция shmarkli() изтрива линии (soply[i] == 1(заплнява се вьв функция prov_lin())) тьй като рисува бели квадратчета вьрху необновен кадр (без ‘graphics.Clear(Color(255, 255, 255))’ <=> ‘graphics.Clear(Color(0, 0, 0, 0))’).
-Негов таймер (IDT_TIMER4) включва при f_sop == 1(функция prov_lin()) или f_sop_ver == 1(loop()->край на игра), блокира клавиатура и работи до f_sop == H_LIN
-Управление:
-VK_UP – ротация,
-VK_LEFT, VK_RIGHT – ляво, дясно,
-VK_DOWN – ускорено движение надолу, 
-VK_PAUSE || VK_PRIOR || VK_NEXT – пауза, 
-VK_RETURN – ввод  в меню etap 0 и 2,
-VK_SNAPSHOT – скриншот, 
-VK_ESCAPE - DestroyWindow(hhhwww);
+## Техническа документация
 
-## Знімки екрану з гри
+### Основа на проекта
+Проектът е базиран на лична разработка "тетрис на ардуино" [Tinkercad проект](https://www.tinkercad.com/things/51vP7AlGOg3-tetris) с последваща разработка за Windows конзола.
 
-![Гра 1](docs/images/Image_312_1.jpg)
-*Початок гри*
+### Архитектура
+- **Модул tetr.h**:
+  - Обработва команди за подготвяне на масиви
+  - Управлява избора на тип игра и сложност (чрез функции `setup_X()`)
+  - Контролира играта чрез променливата `scan` в `loop(typ_gry, scan)`
 
+### Управление чрез клавиатура
+- `VK_UP` – завъртане на фигурата
+- `VK_LEFT`, `VK_RIGHT` – движение наляво/надясно
+- `VK_DOWN` – ускорено движение надолу
+- `VK_PAUSE`/`VK_PRIOR`/`VK_NEXT` – пауза
+- `VK_RETURN` – избор в менюто (etap 0 и 2)
+- `VK_SNAPSHOT` – скрийншот
+- `VK_ESCAPE` – изход от играта (`DestroyWindow(hhhwww)`)
+
+### Таймери
+- **IDT_TIMER1**: Основен таймер (1 сек) с плавно намаляване по хиперболична крива
+- **IDT_TIMER2**: Управлява ускоряването на IDT_TIMER1 (линейно нарастване)
+- **IDT_TIMER3**: Активира се при натискане на DOWN (`fl_s` флаг), работи до `!prov_krok()`
+- **IDT_TIMER4**: Управлява анимациите при изтриване на линии и края на играта
+
+### Взаимодействие на обекти
+- Използват се два основни масива:
+  - `mas_rab[V_LIN + 3][H_LIN + 3]` – игрално поле с допълнителни граници
+  - `fig_tek[4][4]` – текуща фигура
+- Координатна система: `{y,x}`
+- Допълнителните +3 в масива предотвратяват излизане извън границите
+- Функция `prnt_podg()` попълва масива `mas_pr[V_LIN][H_LIN]`
+
+### Визуализация
+- **kubik()**:
+  - Рисува кош, десни титри и базови блокове (kb1, kb2, kb3)
+  - Използва макроси `X()` и `Y()` за независимо отразяване на координати
+  - Премества се по матрицата и рисува блокове, когато `mas_pr[j][i] != 0`
+  - Показва следващата фигура (`fig_next[4][4]`)
+  - В менюто за избор на игра използва статичен `mas_preview`
+  - Показва бутони ("Normal Game", "Adventure", "LEVEL") или съобщения ("PAUSE", "READY") в зависимост от `etap` и `pause`
+
+### Допълнителни функции
+- **GetEncoderClsid()**: Използва се за запазване на скрийншоти
+- **shmarkli()**: Управлява анимацията при изтриване на линии:
+  - Рисува бели квадратчета върху съществуващ кадър
+  - Активира се от `IDT_TIMER4`
+  - Блокира клавиатурата по време на анимацията
 ![Гра 2](docs/images/Image_312_2.jpg)
 *Ігровий процес*
 
