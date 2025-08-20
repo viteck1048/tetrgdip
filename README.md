@@ -89,6 +89,7 @@
 ## Просто прикол
 
 зміна H_LIN та V_LIN міняє габарити корзини
+
 <img src="docs/images/Image_5577_1.jpg" width="30%" alt="Game Screenshot 1"> <img src="docs/images/Image_5577_2.jpg" width="30%" alt="Game Screenshot 2">
 
 ## Автор
