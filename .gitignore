@@ -51,6 +51,6 @@ $RECYCLE.BIN/
 *.lnk
 
 !docs/
-
+*.asm
 *.docx
 setup.ini
