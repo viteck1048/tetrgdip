@@ -29,12 +29,7 @@ bld/
 *.vcxproj.filters
 *.sln
 *.vcxproj.user
-
-# Image files
-*.jpg
-*.jpeg
-*.png
-*.bmp
+*.asm
 
 # Windows image file caches
 Thumbs.db
@@ -55,5 +50,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Doc file
-!docs/
+*.docx
