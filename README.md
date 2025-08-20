@@ -3,7 +3,7 @@
 [English version below](#english)
 
 ## Опис
-
+![Game Screenshots](docs/images/Image_8062_2.jpg)![Game Screenshots](docs/images/Image_6535_2.jpg)![Game Screenshots](docs/images/Image_5692_5.jpg)
 Курсова робота з програмування - гра з падаючими фігурами. Реалізовано на мові C++ з використанням WinAPI та GDI+.
 
 ## Вимоги
@@ -81,6 +81,11 @@
    - Натисніть `Add/Modify`
    - Встановіть бажану гарячу клавішу
    - Перезапустіть Notepad++
+
+## Просто прикол
+
+зміна H_LIN та V_LIN міняє габарити корзини
+![Game Screenshots](docs/images/Image_5577_1.jpg)![Game Screenshots](docs/images/Image_5577_2.jpg)
 
 ## Автор
 
