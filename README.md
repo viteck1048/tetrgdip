@@ -3,7 +3,11 @@
 [English version below](#english)
 
 ## Опис
-![Game Screenshots](docs/images/Image_8062_2.jpg)![Game Screenshots](docs/images/Image_6535_2.jpg)![Game Screenshots](docs/images/Image_5692_5.jpg)
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="docs/images/Image_8062_2.jpg" width="30%" alt="Game Screenshot 1">
+  <img src="docs/images/Image_6535_2.jpg" width="30%" alt="Game Screenshot 2">
+  <img src="docs/images/Image_5692_5.jpg" width="30%" alt="Game Screenshot 3">
+</div>
 Курсова робота з програмування - гра з падаючими фігурами. Реалізовано на мові C++ з використанням WinAPI та GDI+.
 
 ## Вимоги
@@ -85,7 +89,7 @@
 ## Просто прикол
 
 зміна H_LIN та V_LIN міняє габарити корзини
-![Game Screenshots](docs/images/Image_5577_1.jpg)![Game Screenshots](docs/images/Image_5577_2.jpg)
+<img src="docs/images/Image_5577_1.jpg" width="400" alt="Game Screenshot 1"> <img src="docs/images/Image_5577_2.jpg" width="400" alt="Game Screenshot 2">
 
 ## Автор
 
