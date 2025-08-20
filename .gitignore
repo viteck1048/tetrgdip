@@ -50,5 +50,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+!docs/
+
 *.docx
 setup.ini
